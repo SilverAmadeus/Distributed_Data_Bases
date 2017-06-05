@@ -6,8 +6,6 @@
 -- Target DBMS : Oracle 12c
 
 
-connect ilap/ilap@AJRGBD_S1
-
 --SITIO 1
 
 CREATE OR REPLACE SYNONYM hist_stat_lap_f2 FOR HIST_STAT_LAP_F2_AJRG_S1@AJRGBD_S1;

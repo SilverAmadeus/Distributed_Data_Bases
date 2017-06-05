@@ -127,8 +127,8 @@ CREATE TABLE SUCURSAL_F2_AJRG_S2(
     SUCURSAL_ID    NUMBER(10, 0)    NOT NULL,
     CLAVE          VARCHAR2(10)     NOT NULL,
     NOMBRE         VARCHAR2(40)     NOT NULL,
-    LATITUD        NUMBER(10,2)     NOT NULL, --------------------------------------LEL
-    LONGITUD       NUMBER(10,2)     NOT NULL, -------------------------------------LEL
+    LATITUD        NUMBER(10,2)     NOT NULL, 
+    LONGITUD       NUMBER(10,2)     NOT NULL, 
     URL            VARCHAR2(200)    NOT NULL,
     ES_TALLER      NUMBER(1, 0)     NOT NULL,
     ES_VENTA       NUMBER(1, 0)     NOT NULL,

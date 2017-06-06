@@ -17,11 +17,4 @@ create or replace view HISTORICO_STATUS_LAPTOP as (
 		select historico_status_laptop_id, fecha_status, status_laptop_id, laptop_id
 		from hist_stat_lap_f2
 		)
-
 );
-
-
-HISTORICO_STATUS_LAPTOP_ID    NUMBER(10, 0)    NOT NULL,
-    FECHA_STATUS                  DATE             NOT NULL,
-    STATUS_LAPTOP_ID              NUMBER(5, 0)     NOT NULL,
-    LAPTOP_ID                     NUMBER(10, 0)    NOT NULL,

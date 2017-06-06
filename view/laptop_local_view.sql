@@ -7,13 +7,13 @@
 -- @Description: Vista para tabla LAPTOP
 
 
---NO PARA RIMT_S2
---Falta temp y procedimiento :'v'
+--PARA RIMT_S2
+--
 
 create or replace view LAPTOP as (
 	select q1.laptop_id, q1.num_serie, q1.cantidad_ram, q1.caracteristicas_extras,
 			q1.tipo_tarjeta_video_id, q1.tipo_procesador_id, q1.tipo_almacenamiento_id,
-			q1.tipo_monitor_id, q1.laptop_reemplazo_id, get_remote_contrato_by_id(q1.laptop_id) as foto
+			q1.tipo_monitor_id, q1.laptop_reemplazo_id, q2.foto 
     from (
 		select laptop_id, num_serie, cantidad_ram, caracteristicas_extras,
 				tipo_tarjeta_video_id, tipo_procesador_id, tipo_almacenamiento_id,
@@ -41,4 +41,7 @@ create or replace view LAPTOP as (
 				tipo_monitor_id, laptop_reemplazo_id
 		from laptop_f4
 		)q1
+		join 
+		( select laptop_id, foto from laptop_5) q2
+		on q1.laptop_id = q2.laptop_id
 );

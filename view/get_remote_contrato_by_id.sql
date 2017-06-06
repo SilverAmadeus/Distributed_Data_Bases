@@ -29,3 +29,4 @@ create or replace function get_remote_contrato_by_id(v_laptop_id in number ) ret
    			raise;
  end;
 /
+SHOW ERRORS;

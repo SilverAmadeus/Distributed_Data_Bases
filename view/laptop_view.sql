@@ -8,7 +8,6 @@
 
 
 --NO PARA RIMT_S2
---Falta temp y procedimiento :'v'
 
 create or replace view LAPTOP as (
 	select q1.laptop_id, q1.num_serie, q1.cantidad_ram, q1.caracteristicas_extras,
@@ -19,23 +18,17 @@ create or replace view LAPTOP as (
 				tipo_tarjeta_video_id, tipo_procesador_id, tipo_almacenamiento_id,
 				tipo_monitor_id, laptop_reemplazo_id 
 		from laptop_f1
-		
 		union
-		
 		select laptop_id, num_serie, cantidad_ram, caracteristicas_extras,
 				tipo_tarjeta_video_id, tipo_procesador_id, tipo_almacenamiento_id,
 				tipo_monitor_id, laptop_reemplazo_id
 		from laptop_f2
-
 		union
-
 		select laptop_id, num_serie, cantidad_ram, caracteristicas_extras,
 				tipo_tarjeta_video_id, tipo_procesador_id, tipo_almacenamiento_id,
 				tipo_monitor_id, laptop_reemplazo_id
 		from laptop_f3
-
 		union
-
 		select laptop_id, num_serie, cantidad_ram, caracteristicas_extras,
 				tipo_tarjeta_video_id, tipo_procesador_id, tipo_almacenamiento_id,
 				tipo_monitor_id, laptop_reemplazo_id

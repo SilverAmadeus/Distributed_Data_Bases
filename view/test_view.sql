@@ -18,3 +18,5 @@ select count(*) from historico_status_laptop;
 select count(*) from laptop_inventario;
 
 select count(*) from servicio_laptop;
+
+select count(*) from laptop;

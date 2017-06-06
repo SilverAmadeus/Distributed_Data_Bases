@@ -7,11 +7,14 @@
 -- @Description: Vista para tabla SUCURSAL_VENTA
 
 create or replace view SUCURSAL_VENTA as (
-	select sucursal_id, hora_apertura, hora_cierre from suc_venta_f1
-	union
-	select sucursal_id, hora_apertura, hora_cierre from suc_venta_f2
-	union
-	select sucursal_id, hora_apertura, hora_cierre from suc_venta_f3
-	union
-	select sucursal_id, hora_apertura, hora_cierre from suc_venta_f4
+	select sucursal_id, hora_apertura, hora_cierre
+	from(
+		select sucursal_id, hora_apertura, hora_cierre from suc_venta_f1
+		union
+		select sucursal_id, hora_apertura, hora_cierre from suc_venta_f2
+		union
+		select sucursal_id, hora_apertura, hora_cierre from suc_venta_f3
+		union
+		select sucursal_id, hora_apertura, hora_cierre from suc_venta_f4
+	)
 );

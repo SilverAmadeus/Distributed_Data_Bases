@@ -9,14 +9,17 @@
 
 create or replace view SUCURSAL as (
 	select sucursal_id, clave, nombre, latitud, longitud, url, es_venta, es_taller
-	from sucursal_f1
-	union
-	select sucursal_id, clave, nombre, latitud, longitud, url, es_venta, es_taller
-	from sucursal_f2
-	union
-	select sucursal_id, clave, nombre, latitud, longitud, url, es_venta, es_taller
-	from sucursal_f3
-	union 
-	select sucursal_id, clave, nombre, latitud, longitud, url, es_venta, es_taller
-	from sucursal_f4
+	from(
+		select sucursal_id, clave, nombre, latitud, longitud, url, es_venta, es_taller
+		from sucursal_f1
+		union
+		select sucursal_id, clave, nombre, latitud, longitud, url, es_venta, es_taller
+		from sucursal_f2
+		union
+		select sucursal_id, clave, nombre, latitud, longitud, url, es_venta, es_taller
+		from sucursal_f3
+		union 
+		select sucursal_id, clave, nombre, latitud, longitud, url, es_venta, es_taller
+		from sucursal_f4
+		)
 );

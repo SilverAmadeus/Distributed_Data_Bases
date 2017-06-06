@@ -4,8 +4,8 @@
 --@Fecha creación: 13/04/2017
 --@Descripción: Creación de trigger para implementar transparencia de insercion
 
-create or replace trigger t_dml_sucursal
-	instead of insert or update or delete on sucursal
+create or replace trigger t_dml_historico_status_laptop
+	instead of insert or update or delete on historico_status_laptop
 declare
 	v_exists number(1);
 begin
@@ -15,7 +15,7 @@ begin
 			if TO_NUMBER(TO_CHAR(:NEW.fecha_status,'YYYY'))<=2009 then
 				insert into hist_stat_lap_f1(historico_status_laptop_id, fecha_status,
 							status_laptop_id, laptop_id)
-				values(:NEW.historico_status_laptop_id, NEW.fecha_status,
+				values(:NEW.historico_status_laptop_id, :NEW.fecha_status,
 						:NEW.status_laptop_id, :NEW.laptop_id);
 			
 			elsif TO_NUMBER(TO_CHAR(:NEW.fecha_status,'YYYY'))>2009 then
@@ -43,4 +43,4 @@ end;
 
 /
 
-show errors
+show errors;

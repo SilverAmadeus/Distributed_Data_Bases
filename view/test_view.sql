@@ -9,3 +9,8 @@
 
 select count(*) from sucursal;
 
+select count(*) from sucursal_venta;
+
+select count(*) from sucursal_taller;
+
+select count(*) from historico_status_laptop;

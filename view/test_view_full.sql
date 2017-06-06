@@ -28,7 +28,7 @@ connect ilap/ilap@RIMTBD_S1
 
 Prompt Testing de views en RIMTBD SITIO 2
 
-connect ilap/ilap@RIMTBD_S1
+connect ilap/ilap@RIMTBD_S2
 @test_view.sql
 
 Prompt Mission Complete!

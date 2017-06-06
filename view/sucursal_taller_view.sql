@@ -8,12 +8,15 @@
 
 
 
-create or replace SUCURSAL_TALLER as (
-	select sucursal_id, telefono, dia_descanso from suc_taller_f1
-	union
-	select sucursal_id, telefono, dia_descanso from suc_taller_f2
-	union 
-	select sucursal_id, telefono, dia_descanso from suc_taller_f3
-	union
-	select sucursal_id, telefono, dia_descanso from suc_taller_f4
+create or replace view SUCURSAL_TALLER as (
+	select sucursal_id, telefono_atencion, dia_descanso
+	from(
+		select sucursal_id, telefono_atencion, dia_descanso from suc_taller_f1
+		union
+		select sucursal_id, telefono_atencion, dia_descanso from suc_taller_f2
+		union 
+		select sucursal_id, telefono_atencion, dia_descanso from suc_taller_f3
+		union
+		select sucursal_id, telefono_atencion, dia_descanso from suc_taller_f4
+		)
 );

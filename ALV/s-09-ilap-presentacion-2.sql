@@ -9,14 +9,44 @@ whenever sqlerror exit rollback;
 
 Prompt cargando catalogos
 
+--En SITIO 1
+
+connect ilap/ilap@AJRGBD_S1
+
 @carga-inicial/tipo_monitor.sql
-
 @carga-inicial/tipo_procesador.sql
-
 @carga-inicial/tipo_tarjeta_video.sql
-
 @carga-inicial/tipo_almacenamiento.sql
+@carga-inicial/status_laptop.sql
 
+--En SITIO 2
+
+connect ilap/ilap@AJRGBD_S2
+
+@carga-inicial/tipo_monitor.sql
+@carga-inicial/tipo_procesador.sql
+@carga-inicial/tipo_tarjeta_video.sql
+@carga-inicial/tipo_almacenamiento.sql
+@carga-inicial/status_laptop.sql
+
+--En SITIO 3
+
+connect ilap/ilap@RIMTBD_S1
+
+@carga-inicial/tipo_monitor.sql
+@carga-inicial/tipo_procesador.sql
+@carga-inicial/tipo_tarjeta_video.sql
+@carga-inicial/tipo_almacenamiento.sql
+@carga-inicial/status_laptop.sql
+
+--En SITIO 4
+
+connect ilap/ilap@RIMTBD_S2
+
+@carga-inicial/tipo_monitor.sql
+@carga-inicial/tipo_procesador.sql
+@carga-inicial/tipo_tarjeta_video.sql
+@carga-inicial/tipo_almacenamiento.sql
 @carga-inicial/status_laptop.sql
 
 Prompt cargando sucursales

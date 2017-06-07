@@ -19,7 +19,7 @@ begin
 			-- Si el numero de serie es entre 2 y 3 (primer digito) then se va al S2;
 
 			elsif substr(:new.num_serie,1,1) = '2' or substr(:new.num_serie,1,1) = '3' then
-				insert into laptop_f2(laptop_id,num_serie,cantidad_ram,caracteristicas_extras,
+				insert into laptop_f4(laptop_id,num_serie,cantidad_ram,caracteristicas_extras,
 					tipo_tarjeta_video_id,tipo_procesador_id,tipo_almacenamiento_id,tipo_monitor_id,
 					laptop_reemplazo_id)
 				values(:new.laptop_id, :new.num_serie, :new.cantidad_ram, :new.caracteristicas_extras,
@@ -42,7 +42,7 @@ begin
 
 			elsif substr(:new.num_serie,1,1) = '6' or substr(:new.num_serie,1,1) = '7' or
 			  	substr(:new.num_serie,1,1) = '8' or substr(:new.num_serie,1,1) = '9' then
-				insert into laptop_f4(laptop_id,num_serie,cantidad_ram,caracteristicas_extras,
+				insert into laptop_f2(laptop_id,num_serie,cantidad_ram,caracteristicas_extras,
 					tipo_tarjeta_video_id,tipo_procesador_id,tipo_almacenamiento_id,tipo_monitor_id,
 					laptop_reemplazo_id)
 				values(:new.laptop_id,:new.num_serie, :new.cantidad_ram, :new.caracteristicas_extras,

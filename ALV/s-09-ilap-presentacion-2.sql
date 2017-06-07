@@ -122,11 +122,7 @@ Prompt insertando datos BLOB en laptop
 !cp carga-inicial/lap.jpg /tmp
 
 insert into laptop (laptop_id, num_serie, cantidad_ram, caracteristicas_extras, foto,
-
 tipo_tarjeta_video_id, tipo_procesador_id, tipo_almacenamiento_id,
-
 tipo_monitor_id, laptop_reemplazo_id)
-
 values (2001, '1669242499', 26955, 'Laptop con BLOB',
-
 load_blob_from_file('TMP_DIR','lap.jpg'), 9, 587, 2, 45, null);

@@ -19,7 +19,7 @@ connect ilap/ilap@RIMTBD_S1
 
 Prompt Creacion de sinonimos en RIMTBD SITIO 2
 
-connect ilap/ilap@RIMTBD_S1
+connect ilap/ilap@RIMTBD_S2
 @synonym/create_synonym.sql
 
 Prompt Mission Complete!

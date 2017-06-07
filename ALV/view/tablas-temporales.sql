@@ -10,10 +10,9 @@ create global temporary table t_laptop_insert(
 	foto blob not null
 ) on commit preserve rows;
 
-/
+
 
 create global temporary table t_laptop_select(
 	laptop_id number(10,0) constraint t_laptop_select_pk primary key,
 	foto blob not null
 ) on commit preserve rows;
-/

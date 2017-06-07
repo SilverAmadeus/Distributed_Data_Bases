@@ -21,22 +21,22 @@ Prompt Creando objetos y privilegios para soporte de BLObs
 
 Prompt creando funcion para cargar BLOB en AJRGBD_S1
 
-connect sys/sytem@AJRGBD_S1 as sysdba
+connect ilap/ilap@AJRGBD_S1
 @fx-carga-blob-archivo.sql
 
 Prompt creando funcion para cargar BLOB en AJRGBD_S2
 
-connect sys/sytem@AJRGBD_S2 as sysdba
+connect ilap/ilap@AJRGBD_S2
 @fx-carga-blob-archivo.sql
 
 Prompt creando funcion para cargar BLOB en RIMTBD_S1
 
-connect sys/sytem@RIMTBD_S1 as sysdba
+connect ilap/ilap@RIMTBD_S1
 @fx-carga-blob-archivo.sql
 
 Prompt creando funcion para cargar BLOB en RIMTBD_S2
 
-connect sys/sytem@RIMTBD_S1 as sysdba
+connect ilap/ilap@RIMTBD_S2
 @fx-carga-blob-archivo.sql
 
 Prompt	Mission Complete!!!

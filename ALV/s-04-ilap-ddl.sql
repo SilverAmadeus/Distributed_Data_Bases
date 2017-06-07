@@ -8,21 +8,21 @@
 prompt Creando entidades en AJRGBD_S1  
 connect ilap/ilap@AJRGBD_S1
 
-@@./ddl/AJRGBD_S1.sql
+@ddl/AJRGBD_S1.sql
 
 prompt Crea entidades en AJRGBD_S2
 connect ilap/ilap@AJRGBD_S2
 
-@@./ddl/AJRGBD_S2.sql
+@ddl/AJRGBD_S2.sql
 
 prompt Crea entidades en RIMTBD_S1
 connect ilap/ilap@RIMTBD_S1
 
-@@./ddl/RIMTBD_S1.sql
+@ddl/RIMTBD_S1.sql
 
 prompt Crea entidades en RIMTBD_S2
 connect ilap/ilap@RIMTBD_S2
 
-@@./ddl/RIMTBD_S2.sql
+@ddl/RIMTBD_S2.sql
 
 exit

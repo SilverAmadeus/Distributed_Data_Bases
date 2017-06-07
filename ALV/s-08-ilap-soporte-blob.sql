@@ -19,7 +19,24 @@ Prompt Creando objetos y privilegios para soporte de BLObs
 
 --Toda la BS anterior la tiene en s-01-ilap-grant.sql
 
-Prompt creando funcion para cargar BLOB
+Prompt creando funcion para cargar BLOB en AJRGBD_S1
 
+connect sys/sytem@AJRGBD_S1 as sysdba
 @fx-carga-blob-archivo.sql
 
+Prompt creando funcion para cargar BLOB en AJRGBD_S2
+
+connect sys/sytem@AJRGBD_S2 as sysdba
+@fx-carga-blob-archivo.sql
+
+Prompt creando funcion para cargar BLOB en RIMTBD_S1
+
+connect sys/sytem@RIMTBD_S1 as sysdba
+@fx-carga-blob-archivo.sql
+
+Prompt creando funcion para cargar BLOB en RIMTBD_S2
+
+connect sys/sytem@RIMTBD_S1 as sysdba
+@fx-carga-blob-archivo.sql
+
+Prompt	Mission Complete!!!

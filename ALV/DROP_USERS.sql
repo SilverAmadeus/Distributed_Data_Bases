@@ -13,3 +13,5 @@ drop user ilap cascade;
 connect sys/system@rimtbd_s2 as sysdba
 prompt Borrando datos en RIMTBD_S2
 drop user ilap cascade;
+
+exit

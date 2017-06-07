@@ -24,11 +24,17 @@ create type laptop_table as table of laptop_type;
 
 --2. creacion de la tabla temporal para copiar BLOBS
 
-create global temporary table t_laptop(
-	laptop_id number(10,0) constraint t_laptop_pk primary key,
+create global temporary table t_laptop_insert(
+	laptop_id number(10,0) constraint t_laptop_insert_pk primary key,
 	foto blob not null
 ) on commit preserve rows;
 
+/
+
+create global temporary table t_laptop_select(
+	laptop_id number(10,0) constraint t_laptop_select_pk primary key,
+	foto blob not null
+) on commit preserve rows;
 /
 
 --3. creacion de la funcion get_remote_contrato_by_id()
@@ -40,14 +46,14 @@ create or replace function get_remote_contrato_by_id(v_laptop_id in number ) ret
 	v_temp_foto blob;
 	begin
     	--asegura que no haya registros
-    	delete from t_laptop;
+    	delete from t_laptop_select;
     	--inserta los datos obtenidos del fragmento remoto a la tabla temporal.
-    	insert into t_laptop select laptop_id, foto 
+    	insert into t_laptop_select select laptop_id, foto 
     		from laptop_f5 where laptop_id = v_laptop_id;
     	--obtiene el registro de la tabla temporal y lo regresa como blob
-    	select foto into v_temp_foto from t_laptop where laptop_id = v_laptop_id;
+    	select foto into v_temp_foto from t_laptop_select where laptop_id = v_laptop_id;
     	--elimina los registros de la tabla temporal una vez que han sido obtenidos.
-    	delete from t_laptop;
+    	delete from t_laptop_select;
     	commit;
    		return v_temp_foto;
    	exception

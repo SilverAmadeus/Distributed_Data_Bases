@@ -57,15 +57,15 @@ begin
 			end if;
 
 			--inserta el binario, uso de tabla temporal
-			insert into t_laptop(laptop_id,foto)
+			insert into t_laptop_insert(laptop_id,foto)
 			values(:new.laptop_id,:new.foto);
 
 			--inserta en el sitio remoto a través de la tabla temporal
 			insert into laptop_f5
-				select * from t_laptop
+				select * from t_laptop_insert
 				where laptop_id = :new.laptop_id;
 
-			delete from t_laptop
+			delete from t_laptop_insert
 			where laptop_id = :new.laptop_id;
 
 

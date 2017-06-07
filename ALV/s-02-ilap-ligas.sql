@@ -45,4 +45,3 @@ create database link ajrgbd_s1.fi.unam using 'AJRGBD_S1';
 create database link ajrgbd_s2.fi.unam using 'AJRGBD_S2';
 
 prompt Listirrinin
-exit

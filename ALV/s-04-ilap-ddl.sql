@@ -25,4 +25,3 @@ connect ilap/ilap@RIMTBD_S2
 
 @ddl/RIMTBD_S2.sql
 
-exit

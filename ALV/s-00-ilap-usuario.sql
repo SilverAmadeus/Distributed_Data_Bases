@@ -19,4 +19,3 @@ connect sys/system@RIMTBD_S2 as sysdba
 @s-01-ilap-grants.sql
 
 prompt Listo
-exit

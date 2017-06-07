@@ -23,19 +23,19 @@ instead of insert or update or delete on sucursal
  	 			values(:new.sucursal_id,:new.clave,:new.nombre,:new.latitud,:new.longitud,:new.url,:new.es_venta,
  	 				:new.es_taller);
 
- 	 		elsif substr(:new.clave,3,2)= 'EA' and (:new.es_taller = 0 and :new.es_venta = 0) then
+ 	 		elsif substr(:new.clave,3,2)= 'EA' and (:new.es_taller = 0 or :new.es_venta = 0) then
 	
 	 			insert into sucursal_f2 (sucursal_id,clave,nombre,latitud,longitud,url,es_venta,es_taller)
  	 				values(:new.sucursal_id,:new.clave,:new.nombre,:new.latitud,:new.longitud,:new.url,:new.es_venta,
  	 					:new.es_taller);
 	
-	 		elsif substr(:new.clave,3,2)='WS' and (:new.es_taller = 0 and :new.es_venta = 0) then
+	 		elsif substr(:new.clave,3,2)='WS' and (:new.es_taller = 0 or :new.es_venta = 0) then
 	
 	 			insert into sucursal_f3 (sucursal_id,clave,nombre,latitud,longitud,url,es_venta,es_taller)
 	 				values(:new.sucursal_id,:new.clave,:new.nombre,:new.latitud,:new.longitud,:new.url,:new.es_venta,
 	 	 					:new.es_taller);
 	
-	 		elsif substr(:new.clave,3,2)='SO' and (:new.es_taller = 0 and :new.es_venta = 0) then
+	 		elsif substr(:new.clave,3,2)='SO' and (:new.es_taller = 0 or :new.es_venta = 0) then
 	
 	 			insert into sucursal_f4 (sucursal_id,clave,nombre,latitud,longitud,url,es_venta,es_taller)
 	 	 			values(:new.sucursal_id,:new.clave,:new.nombre,:new.latitud,:new.longitud,:new.url,:new.es_venta,

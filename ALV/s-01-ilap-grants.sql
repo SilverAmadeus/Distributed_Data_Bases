@@ -8,7 +8,6 @@ grant create trigger to ilap;
 grant create view to ilap; 
 grant create database link to ilap;
 grant create type to ilap;
-grant create any directory to ilap;	
 create or replace directory tmp_dir as '/tmp';
 grant read on directory tmp_dir to ilap;
 	

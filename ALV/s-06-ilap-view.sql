@@ -15,6 +15,7 @@
 Prompt Creacion de vistas en AJRGBD SITIO 1
 connect ilap/ilap@AJRGBD_S1
 
+@view/remote_blob.sql
 @view/sucursal_view.sql
 @view/sucursal_venta_view.sql
 @view/sucursal_taller_view.sql
@@ -27,6 +28,7 @@ connect ilap/ilap@AJRGBD_S1
 Prompt Creacion de vistas en AJRGBD SITIO 2
 connect ilap/ilap@AJRGBD_S2
 
+@view/remote_blob.sql
 @view/sucursal_view.sql
 @view/sucursal_venta_view.sql
 @view/sucursal_taller_view.sql
@@ -38,6 +40,7 @@ connect ilap/ilap@AJRGBD_S2
 Prompt Creacion de vistas  en RIMTBD SITIO 1
 connect ilap/ilap@RIMTBD_S1
 
+@view/remote_blob.sql
 @view/sucursal_view.sql
 @view/sucursal_venta_view.sql
 @view/sucursal_taller_view.sql

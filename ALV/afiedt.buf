@@ -1,0 +1,2 @@
+select laptop_id, dbms_lob.getlength(foto) from laptop
+/

@@ -8,7 +8,7 @@ Prompt Iniciando con la creacion de la BDD.
 @s-00-ilap-usuario.sql
 
 @s-02-ilap-ligas.sql
---Me salte el 3 :'v
+
 @s-04-ilap-ddl.sql
 
 @s-05-ilap-synonym.sql

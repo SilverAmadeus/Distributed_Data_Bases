@@ -22,7 +22,7 @@ connect ilap/ilap@AJRGBD_S1
 @view/laptop_inventario_view.sql
 @view/servicio_laptop_view.sql
 @view/laptop_view.sql
-
+@view/tablas_temporales.sql
 
 Prompt Creacion de vistas en AJRGBD SITIO 2
 connect ilap/ilap@AJRGBD_S2

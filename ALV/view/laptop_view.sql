@@ -23,19 +23,7 @@ create type laptop_table as table of laptop_type;
 /
 
 --2. creacion de la tabla temporal para copiar BLOBS
-
-create global temporary table t_laptop_insert(
-	laptop_id number(10,0) constraint t_laptop_insert_pk primary key,
-	foto blob not null
-) on commit preserve rows;
-
-/
-
-create global temporary table t_laptop_select(
-	laptop_id number(10,0) constraint t_laptop_select_pk primary key,
-	foto blob not null
-) on commit preserve rows;
-/
+--NOPE
 
 --3. creacion de la funcion get_remote_contrato_by_id()
 --@Description: Funcion para manejo de BLOBs remotos
